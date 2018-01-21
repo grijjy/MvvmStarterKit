@@ -1,0 +1,33 @@
+inherited ViewTracks_Windows: TViewTracks_Windows
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    inherited ListBoxDetails: TListBox
+      Viewport.Width = 390.000000000000000000
+      Viewport.Height = 392.000000000000000000
+      inherited ListBoxItemGenres: TListBoxItem
+        inherited MemoGenres: TMemo
+          Viewport.Width = 262.000000000000000000
+          Viewport.Height = 69.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar: TToolBar
+    inherited ButtonCancel: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 552.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+    inherited ButtonOK: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 464.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+  end
+end

@@ -1,0 +1,115 @@
+inherited ViewTracks_iPhone4in: TViewTracks_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    Size.Width = 320.000000000000000000
+    Size.Height = 504.000000000000000000
+    inherited ToolBarDetails: TToolBar
+      Size.Width = 320.000000000000000000
+      inherited SpeedButtonMaster: TSpeedButton
+        Size.Height = 44.000000000000000000
+        Visible = True
+      end
+      inherited LabelTrackDetails: TLabel
+        Size.Width = 268.000000000000000000
+      end
+    end
+    inherited ListBoxDetails: TListBox
+      Size.Width = 320.000000000000000000
+      Size.Height = 460.000000000000000000
+      Viewport.Width = 320.000000000000000000
+      Viewport.Height = 460.000000000000000000
+      inherited ListBoxItemName: TListBoxItem
+        Size.Width = 320.000000000000000000
+        inherited EditName: TEdit
+          Position.Y = 3.000000000000000000
+          Size.Width = 192.000000000000000000
+          Size.Height = 30.000000000000000000
+        end
+      end
+      inherited ListBoxItemNumber: TListBoxItem
+        Size.Width = 320.000000000000000000
+        inherited SpinBoxTrackNumber: TSpinBox
+          Position.Y = 3.000000000000000000
+          Size.Width = 192.000000000000000000
+          Size.Height = 30.000000000000000000
+        end
+      end
+      inherited ListBoxItemDuration: TListBoxItem
+        Size.Width = 320.000000000000000000
+        inherited GridPanelLayoutDuration: TGridPanelLayout
+          Size.Width = 192.000000000000000000
+          inherited LayoutDurationMinutes: TLayout
+            Size.Width = 96.000000000000000000
+            inherited LabelDurationMinutes: TLabel
+              Position.X = 62.000000000000000000
+              Size.Width = 30.000000000000000000
+            end
+            inherited SpinBoxDurationMinutes: TSpinBox
+              Position.Y = 3.000000000000000000
+              Size.Width = 58.000000000000000000
+              Size.Height = 30.000000000000000000
+            end
+          end
+          inherited LayoutDurationSeconds: TLayout
+            Size.Width = 96.000000000000000000
+            inherited LabelSeconds: TLabel
+              Position.X = 70.000000000000000000
+              Size.Width = 26.000000000000000000
+            end
+            inherited SpinBoxDurationSeconds: TSpinBox
+              Position.Y = 3.000000000000000000
+              Size.Width = 66.000000000000000000
+              Size.Height = 30.000000000000000000
+            end
+          end
+        end
+      end
+      inherited ListBoxItemGenres: TListBoxItem
+        Size.Width = 320.000000000000000000
+        inherited MemoGenres: TMemo
+          Size.Width = 192.000000000000000000
+          Viewport.Width = 192.000000000000000000
+          Viewport.Height = 69.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar: TToolBar
+    Align = Top
+    Size.Width = 320.000000000000000000
+    inherited ButtonCancel: TButton
+      Align = Left
+      Size.Width = 93.000000000000000000
+      StyleLookup = 'backtoolbutton'
+    end
+    inherited ButtonOK: TButton
+      Position.X = 240.000000000000000000
+      StyleLookup = 'donetoolbutton'
+    end
+  end
+  inherited MultiView: TMultiView
+    Mode = PlatformBehaviour
+    Size.Height = 504.000000000000000000
+    Visible = False
+    inherited ToolBarMaster: TToolBar
+      inherited LabelTracks: TLabel
+        Size.Width = 162.000000000000000000
+      end
+      inherited SpeedButtonAddTrack: TSpeedButton
+        Margins.Left = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 174.000000000000000000
+      end
+      inherited SpeedButtonDeleteTrack: TSpeedButton
+        Margins.Left = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 216.000000000000000000
+      end
+    end
+    inherited ListViewTracks: TListView
+      Size.Height = 460.000000000000000000
+    end
+  end
+end

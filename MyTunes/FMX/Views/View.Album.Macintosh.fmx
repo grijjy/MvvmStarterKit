@@ -1,0 +1,31 @@
+inherited ViewAlbum_Macintosh: TViewAlbum_Macintosh
+  DesignerMasterStyle = 0
+  inherited ToolBar: TToolBar
+    inherited ButtonCancel: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 552.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+    inherited ButtonOK: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 464.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+  end
+  inherited ListBox: TListBox
+    Viewport.Width = 624.000000000000000000
+    Viewport.Height = 428.000000000000000000
+    inherited ListBoxItemNotes: TListBoxItem
+      inherited MemoNotes: TMemo
+        Viewport.Width = 496.000000000000000000
+        Viewport.Height = 105.000000000000000000
+      end
+    end
+  end
+end

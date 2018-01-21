@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AC2BBF42-B76D-4176-9CFF-150048A4C848}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FMX\MyTunesFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCL\MyTunesVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tests\MyTunesTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MyTunesFMX">
+        <MSBuild Projects="FMX\MyTunesFMX.dproj"/>
+    </Target>
+    <Target Name="MyTunesFMX:Clean">
+        <MSBuild Projects="FMX\MyTunesFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyTunesFMX:Make">
+        <MSBuild Projects="FMX\MyTunesFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyTunesVCL">
+        <MSBuild Projects="VCL\MyTunesVCL.dproj"/>
+    </Target>
+    <Target Name="MyTunesVCL:Clean">
+        <MSBuild Projects="VCL\MyTunesVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyTunesVCL:Make">
+        <MSBuild Projects="VCL\MyTunesVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyTunesTests">
+        <MSBuild Projects="Tests\MyTunesTests.dproj"/>
+    </Target>
+    <Target Name="MyTunesTests:Clean">
+        <MSBuild Projects="Tests\MyTunesTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyTunesTests:Make">
+        <MSBuild Projects="Tests\MyTunesTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MyTunesFMX;MyTunesVCL;MyTunesTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MyTunesFMX:Clean;MyTunesVCL:Clean;MyTunesTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MyTunesFMX:Make;MyTunesVCL:Make;MyTunesTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

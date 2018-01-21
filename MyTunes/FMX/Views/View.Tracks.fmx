@@ -1,0 +1,339 @@
+object ViewTracks: TViewTracks
+  Left = 0
+  Top = 0
+  Caption = 'Tracks'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 390.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object ToolBarDetails: TToolBar
+      Padding.Left = 4.000000000000000000
+      Padding.Top = 4.000000000000000000
+      Padding.Right = 4.000000000000000000
+      Padding.Bottom = 4.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpeedButtonMaster: TSpeedButton
+        Align = Left
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'drawertoolbutton'
+        Text = 'SpeedButtonMaster'
+        Visible = False
+      end
+      object LabelTrackDetails: TLabel
+        Align = Client
+        Size.Width = 382.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Track Details'
+        TabOrder = 0
+      end
+    end
+    object ListBoxDetails: TListBox
+      Align = Client
+      Size.Width = 390.000000000000000000
+      Size.Height = 392.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 1
+      DisableFocusEffect = True
+      ItemIndex = 0
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 390.000000000000000000
+      Viewport.Height = 392.000000000000000000
+      object ListBoxItemName: TListBoxItem
+        IsSelected = True
+        Padding.Left = 120.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Size.Width = 390.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemnodetail'
+        TabOrder = 0
+        Text = 'Name'
+        object EditName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = VertCenter
+          TabOrder = 0
+          Position.X = 120.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 262.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object ListBoxItemNumber: TListBoxItem
+        Padding.Left = 120.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Position.Y = 36.000000000000000000
+        Size.Width = 390.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemnodetail'
+        TabOrder = 1
+        Text = 'Track#'
+        object SpinBoxTrackNumber: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = VertCenter
+          TabOrder = 0
+          Cursor = crIBeam
+          Max = 999.000000000000000000
+          Position.X = 120.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 262.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object ListBoxItemDuration: TListBoxItem
+        Padding.Left = 120.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 390.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemnodetail'
+        TabOrder = 2
+        Text = 'Duration'
+        object GridPanelLayoutDuration: TGridPanelLayout
+          Align = Client
+          Size.Width = 262.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = LayoutDurationMinutes
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = LayoutDurationSeconds
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end
+            item
+              SizeStyle = Auto
+            end>
+          object LayoutDurationMinutes: TLayout
+            Align = Client
+            Size.Width = 131.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object LabelDurationMinutes: TLabel
+              Align = Right
+              AutoSize = True
+              Margins.Left = 4.000000000000000000
+              Margins.Right = 4.000000000000000000
+              Position.X = 106.000000000000000000
+              Size.Width = 21.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.WordWrap = False
+              Text = 'Min'
+              TabOrder = 1
+            end
+            object SpinBoxDurationMinutes: TSpinBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = VertCenter
+              TabOrder = 0
+              Cursor = crIBeam
+              Max = 59.000000000000000000
+              Position.Y = 7.000000000000000000
+              Size.Width = 102.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object LayoutDurationSeconds: TLayout
+            Align = Client
+            Size.Width = 131.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object LabelSeconds: TLabel
+              Align = Right
+              AutoSize = True
+              Margins.Left = 4.000000000000000000
+              Position.X = 112.000000000000000000
+              Size.Width = 19.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.WordWrap = False
+              Text = 'Sec'
+              TabOrder = 1
+            end
+            object SpinBoxDurationSeconds: TSpinBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = VertCenter
+              TabOrder = 0
+              Cursor = crIBeam
+              Max = 59.000000000000000000
+              Position.Y = 7.000000000000000000
+              Size.Width = 108.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+        end
+      end
+      object ListBoxItemGenres: TListBoxItem
+        Padding.Left = 120.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Position.Y = 108.000000000000000000
+        Size.Width = 390.000000000000000000
+        Size.Height = 77.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemnodetail'
+        TabOrder = 3
+        Text = 'Genres'
+        object MemoGenres: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          TextSettings.WordWrap = True
+          Align = Client
+          Margins.Top = 4.000000000000000000
+          Margins.Bottom = 4.000000000000000000
+          Size.Width = 262.000000000000000000
+          Size.Height = 69.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 262.000000000000000000
+          Viewport.Height = 69.000000000000000000
+        end
+      end
+    end
+  end
+  object ToolBar: TToolBar
+    Align = Bottom
+    Position.Y = 436.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ButtonCancel: TButton
+      Align = Right
+      Cancel = True
+      ModalResult = 2
+      Position.X = 560.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Cancel'
+    end
+    object ButtonOK: TButton
+      Align = Right
+      Default = True
+      ModalResult = 1
+      Position.X = 480.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'OK'
+    end
+  end
+  object MultiView: TMultiView
+    TargetControl = LayoutMain
+    MasterButton = SpeedButtonMaster
+    Mode = Panel
+    Size.Width = 250.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ToolBarMaster: TToolBar
+      Size.Width = 250.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelTracks: TLabel
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Size.Width = 194.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        Text = 'Tracks'
+      end
+      object SpeedButtonAddTrack: TSpeedButton
+        Action = ActionAddTrack
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 198.000000000000000000
+        Size.Width = 26.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        ParentShowHint = False
+        ShowHint = True
+        StyleLookup = 'additembutton'
+      end
+      object SpeedButtonDeleteTrack: TSpeedButton
+        Action = ActionDeleteTrack
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 224.000000000000000000
+        Size.Width = 26.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        ParentShowHint = False
+        ShowHint = True
+        StyleLookup = 'deleteitembutton'
+      end
+    end
+    object ListViewTracks: TListView
+      ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+      ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 250.000000000000000000
+      Size.Height = 392.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+      ItemAppearanceObjects.ItemObjects.Image.Visible = False
+      CanSwipeDelete = False
+      SearchVisible = True
+      SearchAlwaysOnTop = False
+    end
+  end
+  object ActionList: TActionList
+    Left = 20
+    Top = 144
+    object ActionAddTrack: TAction
+    end
+    object ActionDeleteTrack: TAction
+    end
+  end
+end

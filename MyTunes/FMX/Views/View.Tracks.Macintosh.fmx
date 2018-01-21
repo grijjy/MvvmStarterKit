@@ -1,0 +1,55 @@
+inherited ViewTracks_Macintosh: TViewTracks_Macintosh
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    inherited ListBoxDetails: TListBox
+      Viewport.Width = 390.000000000000000000
+      Viewport.Height = 392.000000000000000000
+      inherited ListBoxItemDuration: TListBoxItem
+        inherited GridPanelLayoutDuration: TGridPanelLayout
+          inherited LayoutDurationMinutes: TLayout
+            inherited LabelDurationMinutes: TLabel
+              Position.X = 104.000000000000000000
+              Size.Width = 23.000000000000000000
+            end
+            inherited SpinBoxDurationMinutes: TSpinBox
+              Size.Width = 100.000000000000000000
+            end
+          end
+          inherited LayoutDurationSeconds: TLayout
+            inherited LabelSeconds: TLabel
+              Position.X = 111.000000000000000000
+              Size.Width = 20.000000000000000000
+            end
+            inherited SpinBoxDurationSeconds: TSpinBox
+              Size.Width = 107.000000000000000000
+            end
+          end
+        end
+      end
+      inherited ListBoxItemGenres: TListBoxItem
+        inherited MemoGenres: TMemo
+          Viewport.Width = 262.000000000000000000
+          Viewport.Height = 69.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar: TToolBar
+    inherited ButtonCancel: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 552.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+    inherited ButtonOK: TButton
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 464.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Height = 28.000000000000000000
+    end
+  end
+end

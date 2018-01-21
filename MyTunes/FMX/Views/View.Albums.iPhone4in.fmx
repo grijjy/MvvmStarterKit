@@ -1,0 +1,63 @@
+inherited ViewAlbums_iPhone4in: TViewAlbums_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    Size.Width = 320.000000000000000000
+    Size.Height = 548.000000000000000000
+    inherited ToolBar: TToolBar
+      Size.Width = 320.000000000000000000
+      inherited SpeedButtonMaster: TSpeedButton
+        Size.Height = 44.000000000000000000
+        Visible = True
+      end
+      inherited LabelAlbumDetails: TLabel
+        Size.Width = 150.000000000000000000
+      end
+      inherited ButtonEditAlbum: TButton
+        Position.X = 198.000000000000000000
+      end
+    end
+    inherited RectangleBackground: TRectangle
+      Size.Width = 320.000000000000000000
+      Size.Height = 504.000000000000000000
+      inherited ImageAlbumCover: TImage
+        Size.Width = 296.000000000000000000
+        Size.Height = 298.777343750000000000
+      end
+      inherited TextTitle: TText
+        Size.Width = 296.000000000000000000
+      end
+      inherited TextArtist: TText
+        Size.Width = 296.000000000000000000
+      end
+      inherited ListViewTracks: TListView
+        Position.Y = 368.000000000000000000
+        Size.Width = 296.000000000000000000
+      end
+    end
+  end
+  inherited MultiView: TMultiView
+    Mode = PlatformBehaviour
+    Size.Height = 548.000000000000000000
+    Visible = False
+    inherited ToolBarMaster: TToolBar
+      inherited LabelAlbums: TLabel
+        Size.Width = 162.000000000000000000
+      end
+      inherited SpeedButtonAddAlbum: TSpeedButton
+        Margins.Left = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 216.000000000000000000
+      end
+      inherited SpeedButtonDeleteAlbum: TSpeedButton
+        Margins.Left = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 174.000000000000000000
+      end
+    end
+    inherited ListViewAlbums: TListView
+      Size.Height = 504.000000000000000000
+    end
+  end
+end

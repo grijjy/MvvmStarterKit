@@ -1,0 +1,87 @@
+inherited ViewAlbum_NmXhdpiPh: TViewAlbum_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited ToolBar: TToolBar
+    Align = Top
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    inherited ButtonCancel: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      StyleLookup = 'backtoolbutton'
+    end
+    inherited ButtonOK: TButton
+      Position.X = 352.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      StyleLookup = 'donetoolbutton'
+    end
+  end
+  inherited ListBox: TListBox
+    Size.Width = 384.000000000000000000
+    Size.Height = 559.000000000000000000
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 559.000000000000000000
+    inherited ListBoxItemTitle: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited EditTitle: TEdit
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemArtist: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited EditArtist: TEdit
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemRecordLabel: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited EditRecordLabel: TEdit
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemCopyright: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited EditCopyright: TEdit
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemReleaseDate: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited DateEditReleaseDate: TDateEdit
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemBackgroundColor: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited ComboColorBoxBackground: TComboColorBox
+        Position.Y = 2.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited ListBoxItemNotes: TListBoxItem
+      Size.Width = 384.000000000000000000
+      inherited MemoNotes: TMemo
+        Size.Width = 256.000000000000000000
+        Viewport.Width = 256.000000000000000000
+        Viewport.Height = 105.000000000000000000
+      end
+    end
+    inherited ListBoxItemTracks: TListBoxItem
+      Size.Width = 384.000000000000000000
+    end
+  end
+end

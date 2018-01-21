@@ -1,0 +1,224 @@
+object ViewAlbum: TViewAlbum
+  Left = 0
+  Top = 0
+  ActiveControl = EditTitle
+  Caption = 'Album'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBar: TToolBar
+    Align = Bottom
+    Position.Y = 436.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ButtonCancel: TButton
+      Align = Right
+      Cancel = True
+      ModalResult = 2
+      Position.X = 560.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Cancel'
+    end
+    object ButtonOK: TButton
+      Align = Right
+      Default = True
+      ModalResult = 1
+      Position.X = 480.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'OK'
+    end
+  end
+  object ListBox: TListBox
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Size.Width = 624.000000000000000000
+    Size.Height = 428.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 1
+    DisableFocusEffect = True
+    ItemIndex = 0
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 624.000000000000000000
+    Viewport.Height = 428.000000000000000000
+    object ListBoxItemTitle: TListBoxItem
+      IsSelected = True
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 0
+      Text = 'Title'
+      object EditTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = VertCenter
+        TabOrder = 0
+        Position.X = 120.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItemArtist: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 1
+      Text = 'Artist'
+      object EditArtist: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = VertCenter
+        TabOrder = 0
+        Position.X = 120.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItemRecordLabel: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 2
+      Text = 'Record Label'
+      object EditRecordLabel: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = VertCenter
+        TabOrder = 0
+        Position.X = 120.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItemCopyright: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 108.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 3
+      Text = 'Copyright'
+      object EditCopyright: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = VertCenter
+        TabOrder = 0
+        Position.X = 120.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItemReleaseDate: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 4
+      Text = 'Release Date'
+      object DateEditReleaseDate: TDateEdit
+        Date = 43104.000000000000000000
+        Align = VertCenter
+        Position.X = 120.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+    object ListBoxItemBackgroundColor: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 180.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 5
+      Text = 'Background'
+      object ComboColorBoxBackground: TComboColorBox
+        Align = VertCenter
+        Color = claWhite
+        Position.X = 120.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+    object ListBoxItemNotes: TListBoxItem
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 113.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 6
+      Text = 'Notes'
+      object MemoNotes: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        TextSettings.WordWrap = True
+        Align = Client
+        Margins.Top = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 496.000000000000000000
+        Size.Height = 105.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 496.000000000000000000
+        Viewport.Height = 105.000000000000000000
+      end
+    end
+    object ListBoxItemTracks: TListBoxItem
+      ItemData.Accessory = aMore
+      Padding.Left = 120.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Position.Y = 329.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 7
+      Text = 'Tracks'
+      OnClick = ListBoxItemTracksClick
+    end
+  end
+end

@@ -1,0 +1,200 @@
+object ViewAlbums: TViewAlbums
+  Left = 0
+  Top = 0
+  Caption = 'MyTunes - FMX Edition'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 390.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ToolBar: TToolBar
+      Padding.Left = 4.000000000000000000
+      Padding.Top = 4.000000000000000000
+      Padding.Right = 4.000000000000000000
+      Padding.Bottom = 4.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpeedButtonMaster: TSpeedButton
+        Align = Left
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'drawertoolbutton'
+        Text = 'SpeedButtonMaster'
+        Visible = False
+      end
+      object LabelAlbumDetails: TLabel
+        Align = Client
+        Size.Width = 264.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Album Details'
+        TabOrder = 0
+      end
+      object ButtonEditAlbum: TButton
+        Action = ActionEditAlbum
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 268.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 118.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object RectangleBackground: TRectangle
+      Align = Client
+      Fill.Color = claNull
+      Padding.Left = 12.000000000000000000
+      Padding.Top = 12.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Padding.Bottom = 12.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 436.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF7A7A7A
+      object ImageAlbumCover: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Margins.Top = 4.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 366.000000000000000000
+        Size.Height = 230.777343750000000000
+        Size.PlatformDefault = False
+      end
+      object TextTitle: TText
+        Align = Top
+        Position.X = 12.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 366.000000000000000000
+        Size.Height = 23.941406250000000000
+        Size.PlatformDefault = False
+        Text = 'Title'
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.HorzAlign = Leading
+        TextSettings.VertAlign = Leading
+      end
+      object TextArtist: TText
+        Align = Top
+        Position.X = 12.000000000000000000
+        Position.Y = 35.941406250000000000
+        Size.Width = 366.000000000000000000
+        Size.Height = 21.281250000000000000
+        Size.PlatformDefault = False
+        Text = 'Artist'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.HorzAlign = Leading
+        TextSettings.VertAlign = Leading
+      end
+      object ListViewTracks: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Bottom
+        Position.X = 12.000000000000000000
+        Position.Y = 300.000000000000000000
+        Size.Width = 366.000000000000000000
+        Size.Height = 124.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        ItemAppearance.ItemHeight = 24
+        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+      end
+    end
+  end
+  object MultiView: TMultiView
+    TargetControl = LayoutMain
+    MasterButton = SpeedButtonMaster
+    Mode = Panel
+    Size.Width = 250.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBarMaster: TToolBar
+      Size.Width = 250.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelAlbums: TLabel
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Size.Width = 194.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        Text = 'Albums'
+      end
+      object SpeedButtonAddAlbum: TSpeedButton
+        Action = ActionAddAlbum
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 198.000000000000000000
+        Size.Width = 26.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        ParentShowHint = False
+        ShowHint = True
+        StyleLookup = 'additembutton'
+      end
+      object SpeedButtonDeleteAlbum: TSpeedButton
+        Action = ActionDeleteAlbum
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 224.000000000000000000
+        Size.Width = 26.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        ParentShowHint = False
+        ShowHint = True
+        StyleLookup = 'deleteitembutton'
+      end
+    end
+    object ListViewAlbums: TListView
+      ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+      ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 250.000000000000000000
+      Size.Height = 436.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+      ItemAppearanceObjects.ItemObjects.Image.Visible = False
+      CanSwipeDelete = False
+      OnChange = ListViewAlbumsChange
+      OnDeleteItem = ListViewAlbumsDeleteItem
+      SearchVisible = True
+      SearchAlwaysOnTop = False
+    end
+  end
+  object ActionList: TActionList
+    Left = 20
+    Top = 80
+    object ActionAddAlbum: TAction
+    end
+    object ActionDeleteAlbum: TAction
+    end
+    object ActionEditAlbum: TAction
+      Text = 'Edit Album'
+    end
+  end
+end

@@ -1,0 +1,69 @@
+inherited ViewAlbums_NmXhdpiPh: TViewAlbums_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited ToolBar: TToolBar
+      Size.Width = 400.000000000000000000
+      Size.Height = 48.000000000000000000
+      inherited SpeedButtonMaster: TSpeedButton
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Visible = True
+      end
+      inherited LabelAlbumDetails: TLabel
+        Size.Width = 226.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+      inherited ButtonEditAlbum: TButton
+        Position.X = 278.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited RectangleBackground: TRectangle
+      Size.Width = 400.000000000000000000
+      Size.Height = 567.000000000000000000
+      inherited ImageAlbumCover: TImage
+        Size.Width = 376.000000000000000000
+        Size.Height = 361.777343750000000000
+      end
+      inherited TextTitle: TText
+        Size.Width = 376.000000000000000000
+      end
+      inherited TextArtist: TText
+        Size.Width = 376.000000000000000000
+      end
+      inherited ListViewTracks: TListView
+        Position.Y = 431.000000000000000000
+        Size.Width = 376.000000000000000000
+      end
+    end
+  end
+  inherited MultiView: TMultiView
+    Mode = PlatformBehaviour
+    Size.Height = 615.000000000000000000
+    Visible = False
+    inherited ToolBarMaster: TToolBar
+      Size.Height = 48.000000000000000000
+      inherited LabelAlbums: TLabel
+        Size.Width = 150.000000000000000000
+        Size.Height = 48.000000000000000000
+      end
+      inherited SpeedButtonAddAlbum: TSpeedButton
+        Position.X = 154.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+      end
+      inherited SpeedButtonDeleteAlbum: TSpeedButton
+        Position.X = 202.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+      end
+    end
+    inherited ListViewAlbums: TListView
+      Size.Height = 567.000000000000000000
+    end
+  end
+end
