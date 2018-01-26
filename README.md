@@ -10,5 +10,5 @@ The easiest way to get started is with the following three blog posts. They prov
 
 * [MVVM Starter Kit (Part 1 of 3)](https://blog.grijjy.com/2018/01/22/mvvm-starter-kit-part-1-of-3/): introduces the MVVM pattern, presents a data binding framework, and talks about buildig the Models for a sample application.
 * [MVVM Starter Kit (Part 2 of 3)](https://blog.grijjy.com/2018/01/24/mvvm-starter-kit-part-2-of-3/): focuses on ViewModels and how they can be unit tested.
-* MVVM Starter Kit (Part 3 of 3): ties everything together by looking at Views and how to bind them to ViewModels. Shows how you can build both a VCL and FMX version of the same application with a minimum amount of framework-specific code.
+* [MVVM Starter Kit (Part 3 of 3)](https://blog.grijjy.com/2018/01/26/mvvm-starter-kit-part-3-of-3/): ties everything together by looking at Views and how to bind them to ViewModels. Shows how you can build both a VCL and FMX version of the same application with a minimum amount of framework-specific code.
 
