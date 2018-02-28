@@ -10,7 +10,7 @@ unit Grijjy.Mvvm.Controls.Fmx;
   (eg. TBindableSpinBox) because the FMX framework uses class names for some
   functionality (for example, see
   IFMXDefaultPropertyValueService.GetDefaultPropertyValue).
-  We could replace this service with or own, but there are other cases where
+  We could replace this service with our own, but there are other cases where
   class names matter (such as with styling). }
 {$INCLUDE 'Grijjy.inc'}
 
