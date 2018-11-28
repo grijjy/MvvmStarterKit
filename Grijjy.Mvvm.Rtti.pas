@@ -391,7 +391,10 @@ const
     TgoValueType.Str,          // tkUString,
     TgoValueType.Unsupported,  // tkClassRef
     TgoValueType.Ordinal,      // tkPointer
-    TgoValueType.Unsupported); // tkProcedure
+    TgoValueType.Unsupported   // tkProcedure
+    {$IF RTLVersion >= 33},
+    TgoValueType.Unsupported   // tkMRecord
+    {$ENDIF});
 
 { Property Getters }
 
