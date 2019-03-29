@@ -90,6 +90,7 @@ type
     FViewFreeListener: TViewFreeListener;
   protected
     { IgoView }
+    procedure Execute;
     procedure ExecuteModal(const AResultProc: TProc<TModalResult>);
   protected
     { IgoView<TVM> }
@@ -124,6 +125,12 @@ destructor TgoViewProxy<TVM>.Destroy;
 begin
   FViewFreeListener.Free;
   inherited;
+end;
+
+procedure TgoViewProxy<TVM>.Execute;
+begin
+  if Assigned(FViewFreeListener.ActualView) then
+    FViewFreeListener.ActualView.Execute;
 end;
 
 procedure TgoViewProxy<TVM>.ExecuteModal(const AResultProc: TProc<TModalResult>);

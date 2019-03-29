@@ -461,6 +461,9 @@ type
   { Base interface for the generic IgoView<TVM> version }
   IgoView = interface
   ['{5EF31C67-EB85-48EB-A390-8097DB0EFED2}']
+    { Executes the view }
+    procedure Execute;
+
     { Executes the view in a modal way.
 
       Parameters:
