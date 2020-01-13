@@ -1222,6 +1222,7 @@ begin
   AListBoxItem.ItemData.Detail := Template.GetDetail(AItem);
   AListBoxItem.ImageIndex := Template.GetImageIndex(AItem);
   AListBoxItem.Data := AItem;
+  AListBoxItem.StyleLookup := Template.GetStyle(AItem);
 end;
 
 { TListView }

@@ -338,6 +338,7 @@ type
 
       Returns -1 by default. }
     class function GetImageIndex(const AItem: TObject): Integer; virtual;
+    class function GetStyle(const AItem: TObject): string; virtual;
   end;
   TgoDataTemplateClass = class of TgoDataTemplate;
 
@@ -649,6 +650,11 @@ end;
 class function TgoDataTemplate.GetImageIndex(const AItem: TObject): Integer;
 begin
   Result := -1;
+end;
+
+class function TgoDataTemplate.GetStyle(const AItem: TObject): string;
+begin
+  Result := '';
 end;
 
 { TgoValueConverter }
