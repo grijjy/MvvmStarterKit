@@ -55,6 +55,9 @@ type
       Should usually be overridden to set up the data bindings. }
     procedure InitView(const AViewModel: TVM; const AOwnsViewModel: Boolean);
 
+    { Executes the view }
+    procedure Execute;
+
     { Executes the view in a modal way.
 
       Parameters:
@@ -96,6 +99,11 @@ procedure TgoFormView<TVM>.DoClose(var Action: TCloseAction);
 begin
   Action := TCloseAction.caFree;
   inherited;
+end;
+
+procedure TgoFormView<TVM>.Execute;
+begin
+  Show;
 end;
 
 procedure TgoFormView<TVM>.ExecuteModal(const AResultProc: TProc<TModalResult>);

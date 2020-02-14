@@ -74,6 +74,9 @@ type
       any data bindings. }
     procedure InitView(const AViewModel: TVM; const AOwnsViewModel: Boolean);
 
+    { Executes the view }
+    procedure Execute;
+
     { Executes the view in a modal way.
 
       Parameters:
@@ -144,6 +147,11 @@ begin
     FOverlay.DisposeOf;
   end;
   {$ENDIF}
+end;
+
+procedure TgoFormView<TVM>.Execute;
+begin
+  Show;
 end;
 
 procedure TgoFormView<TVM>.ExecuteModal(const AResultProc: TProc<TModalResult>);

@@ -338,6 +338,7 @@ type
 
       Returns -1 by default. }
     class function GetImageIndex(const AItem: TObject): Integer; virtual;
+    class function GetStyle(const AItem: TObject): string; virtual;
   end;
   TgoDataTemplateClass = class of TgoDataTemplate;
 
@@ -461,6 +462,9 @@ type
   { Base interface for the generic IgoView<TVM> version }
   IgoView = interface
   ['{5EF31C67-EB85-48EB-A390-8097DB0EFED2}']
+    { Executes the view }
+    procedure Execute;
+
     { Executes the view in a modal way.
 
       Parameters:
@@ -646,6 +650,11 @@ end;
 class function TgoDataTemplate.GetImageIndex(const AItem: TObject): Integer;
 begin
   Result := -1;
+end;
+
+class function TgoDataTemplate.GetStyle(const AItem: TObject): string;
+begin
+  Result := '';
 end;
 
 { TgoValueConverter }
